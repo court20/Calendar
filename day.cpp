@@ -8,23 +8,23 @@ class day{
 		string day;
 		vector<assignment> events;
 	public:
-
+		//creates a day
 		day(string d){
 			day=d;
 		}
-
+		//sets the name of the day
 		void setDay(string d) {
 			day=d;
 		}
-
+		//returns the name of the day
 		string getDay() {
 			return day;
 		}
-
+		//adds an event if theres not already something at that time
 		bool addEvent(assignment a){
 
 			int time=a.getTime;
-
+			//goes through the events and returns false if event cannot be added
 			for(int x=0;x<events.size();x++){
 				int start=events[x].getTime();
 				int end=events[x].getLength()+start;
@@ -39,7 +39,7 @@ class day{
 				return true;
 			}
 		}
-
+		//removes event by name
 		bool removeEvent(asignment a){
 			bool removed=false;
 			for(int x=0; x<events.size();x++){
@@ -49,7 +49,7 @@ class day{
 				}
 			return removed;
 		}
-
+		//returns the vector of events
 		vector<events> getEvents(){
 			return events;
 		}
