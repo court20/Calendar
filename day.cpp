@@ -29,8 +29,12 @@ class day{
 				int start=events[x].getTime();
 				int end=events[x].getLength()+start;
 				int eventEnd=a.getTime()+a.getLength();
-				if(a.getTime()>=start&&a.getTime<=end) {return false;}
-				if(eventEnd>=start&&eventEnd<=end) {return false;}
+				if(a.getTime()>=start&&a.getTime<=end){
+					return false;
+				}
+				if(eventEnd>=start&&eventEnd<=end) {
+					return false;
+				}
 				events.push_back(a);
 				return true;
 			}
