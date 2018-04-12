@@ -4,15 +4,25 @@ using namespace std;
 
 class day{
 	private:
+
 		string day;
 		vector<assignment> events;
 	public:
+
 		day(string d){
 			day=d;
 		}
-		void setDay(string d) {day=d;}
-		string getDay() {return day;}
+
+		void setDay(string d) {
+			day=d;
+		}
+
+		string getDay() {
+			return day;
+		}
+
 		bool addEvent(assignment a){
+
 			int time=a.getTime;
 
 			for(int x=0;x<events.size();x++){
@@ -25,9 +35,22 @@ class day{
 				return true;
 			}
 		}
+
 		bool removeEvent(asignment a){
-		
+			bool removed=false;
+			for(int x=0; x<events.size();x++){
+				if(events[x]==a){
+					events.erase(events.begin()+x);
+					removed=true;
+				}
+			return removed;
 		}
+
+		vector<events> getEvents(){
+			return events;
+		}
+
+
 };
 
 			
