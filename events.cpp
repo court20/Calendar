@@ -10,6 +10,7 @@ class event{
 		int length;
 		bool  repeat;
 	public:
+		//all of the attributes of the event
 		event(string n, string d, int t, int r, int l, bool r){
 			name=n;
 			day=d;
@@ -18,7 +19,7 @@ class event{
 			length=l;
 			repeat=r;
 		}
-
+		//setters and getters for the attributes
 		void setName(string n) {
 			name=n;
 		}
