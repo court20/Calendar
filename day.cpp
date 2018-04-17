@@ -1,5 +1,6 @@
 #include <string>
 #include <vector>
+#include "day.h"
 using namespace std;
 
 class day{
@@ -40,7 +41,7 @@ class day{
 			}
 		}
 		//removes event by name
-		bool removeEvent(asignment a){
+		bool removeEvent(assignment a){
 			bool removed=false;
 			for(int x=0; x<events.size();x++){
 				if(events[x]==a){
