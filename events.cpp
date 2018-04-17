@@ -1,4 +1,5 @@
 #include <string>
+#include "event.h"
 using namespace std;
 
 class event{
