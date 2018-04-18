@@ -8,7 +8,7 @@ class day {
 private:
 
 	string day;
-	vector <assignment> events;
+	vector <event> events;
 	int wake;
 	int sleep;
 
