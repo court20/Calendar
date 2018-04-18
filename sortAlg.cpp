@@ -8,6 +8,7 @@ class sortAlg{
 	private:
 		day[] week;
 		vector<event> events;
+		vector<event> chunks;
 
 	public:
 		sortAlg(day[] w,vector<event> e){
