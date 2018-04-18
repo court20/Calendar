@@ -76,7 +76,8 @@ class assignment: public event{
 		int modularity;
 	public:
 		assignment(string n, string d, int t, int r, int l, bool r, int m){
-			event( string n, string d, int t, int r, int l, bool r){
+			event(n, d, t, r, l, r, m);
+			{
 				modularity=m;
 			}
 		}
