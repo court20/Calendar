@@ -68,6 +68,7 @@ class event{
 		bool getRepeat() {
 			return repeat;
 		}
+
 };
 
 class assignment: public event{

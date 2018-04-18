@@ -16,7 +16,7 @@ class event
             bool repeat;
        
        public:
-            event(string n, string d, int t, int r, int l, bool r,);
+            event(string n, string d, int t, int r, int l, bool r);
             void setName(string n);
             void setDay(string n);
             void setTime(int n);
@@ -30,11 +30,11 @@ class event
             int getRest();
             bool getRepeat();
             
-}
+};
 
 class assignment: public event
 {
-      private;
+private:
             int modularity;
             
       public:
@@ -42,6 +42,6 @@ class assignment: public event
             void setModularity(int m);
             int getModularity();
             
-}
+};
 
 #endif

@@ -20,6 +20,6 @@ class day
               bool removeEvent(assignment a);
               vector<events> getEvents();
 
-}
+};
 
 #endif
