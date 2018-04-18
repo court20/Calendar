@@ -11,6 +11,8 @@ class day
         private: 
               string day;
               vector<assignment> events;
+              int wake;
+              int sleep;
               
         public:
               day(string d);
@@ -19,6 +21,10 @@ class day
               bool addEvent(assignment a);
               bool removeEvent(assignment a);
               vector<events> getEvents();
+              void setwake(int n);
+              void setSleep(int n);
+              int getWake();
+              int getSleep();
 
 };
 

@@ -1,6 +1,7 @@
 #include <string>
 #include <vector>
 #include "day.h"
+
 using namespace std;
 
 class day {
@@ -8,6 +9,9 @@ private:
 
 	string day;
 	vector <assignment> events;
+	int wake;
+	int sleep;
+
 public:
 	//creates a day
 	day(string d) {
@@ -40,8 +44,8 @@ public:
 				return false;
 			}
 			events.push_back(a);
-			return true;
 		}
+		return true;
 	}
 
 	//removes event by name
@@ -52,14 +56,35 @@ public:
 				events.erase(events.begin() + x);
 				removed = true;
 			}
-			return removed;
 		}
-		//returns the vector of events
-		vector <events> getEvents() {
-			return events;
-		}
-
+		return removed;
 	}
+
+	//returns the vector of events
+	vector <events> getEvents() {
+		return events;
+	}
+
+	void setWake(int n)
+	{
+		wake = n;
+	}
+
+	int getWake()
+	{
+		return wake;
+	}
+
+	void setSleep(int n)
+	{
+		sleep = n;
+	}
+
+	int getSleep()
+	{
+		return sleep;
+	}
+
 };
 
 			
