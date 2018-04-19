@@ -64,7 +64,12 @@ public:
 	vector <events> getEvents() {
 		return events;
 	}
-
+	
+	//returns the vector of chunks
+	vector <chunks> getChunks() {
+		return chunks;
+	}
+	
 	void setWake(int n)
 	{
 		wake = n;
