@@ -53,8 +53,8 @@ event findLargest(){
             }
         }
     }
-    event e = chunks[i];
-    chunks.erase(chunks[i]);
+    event e = chunks[location];
+    chunks.erase(chunks[location]);
     return e;
 
 }
