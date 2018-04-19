@@ -34,3 +34,27 @@ void insertEvent(event e)
 
 	}
 }
+
+
+event findLargest(){
+
+    int largest;
+    int newest;
+
+    for(int i = 0; i < chunks.size() ;i++){
+
+        if(i == 0){
+            largest = chunks[i].getLength();
+        }
+        else{
+            newest = chunks[i].getLength();
+            if(newest > largest){
+                int location = i;
+            }
+        }
+    }
+    event e = chunks[i];
+    chunks.erase(chunks[i]);
+    return e;
+
+}
