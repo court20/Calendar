@@ -28,8 +28,15 @@ public:
 		return day;
 	}
 
-	//adds an event if theres not already something at that time
-	bool addEvent(assignment a) {
+	bool addEvent(assignment a)
+	/*
+	* Function will check to see if an event can be added.
+	* Check is done by seeing if the assignment/event's time slot is not taken up within the day already. 
+	* If so, the bool value will return true and the event will be added into the event vector.
+	* Otherwise, the bool value will return false, indicating that there was another event in the desired time slot.
+	*/
+	
+	{
 
 		int time = a.getTime;
 		//goes through the events and returns false if event cannot be added
@@ -48,8 +55,17 @@ public:
 		return true;
 	}
 
-	//removes event by name
-	bool removeEvent(assignment a) {
+	bool removeEvent(assignment a) 
+	/*
+	* Function will check to see if an event can be removed. 
+	* Check is done by iterating through the vector, checking to see if the assignment wanting to be deleted 
+	* is within the vector.
+	* If so, the bool value will return true and the event will be removed from the vector.
+	* Otherwise, the bool value will return false, indicating that the event doesn't exist within the vector 
+	* or that the event could not have been found.
+	*/
+		
+	{
 		bool removed = false;
 		for (int x = 0; x < events.size(); x++) {
 			if (events[x] == a) {
@@ -65,21 +81,25 @@ public:
 		return events;
 	}	
 	
+	// sets the waking time 
 	void setWake(int n)
 	{
 		wake = n;
 	}
-
+	
+	// gets the waking time 
 	int getWake()
 	{
 		return wake;
 	}
 
+	// sets the sleeping time 
 	void setSleep(int n)
 	{
 		sleep = n;
 	}
-
+	
+	// gets the sleeping time
 	int getSleep()
 	{
 		return sleep;
