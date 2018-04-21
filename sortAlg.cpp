@@ -58,7 +58,7 @@ public:
 						z++;
                     }
                 }
-				y++
+				y++;
             }
         }
 		if(!insersted){
