@@ -91,3 +91,31 @@ event findLargest(){
     return e;
 
 }
+
+						   
+vector Chunk() {
+        /*
+         * loop through all assignments
+         * go through their individual modularity values
+         * split them into a number of chunks equal to modularity
+         * figure out a way to create a variable amount of variables (DONE)
+         * Ways to create a variable amount of variables:
+         * vector<int> ints;
+         * or
+         * int *px = new int[n]; //(n variables, n is known at runtime)
+         */
+
+        for(int i = 0; i < chunks.size() ;i++){
+               int modularity = chunks[i].getModularity();
+               int time = chunks[i].getTime();
+               int split = time / modularity;
+
+               newVec = vector<modularity>; //creates an amount of variables equal to variable modularity
+               for(int k =0; k < newVec.size(); k++){
+
+                   newVec[k].setTime() = split;
+               }
+
+
+            }
+    }
