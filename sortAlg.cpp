@@ -15,6 +15,7 @@ class sortAlg{
 
 	public:
 		sortAlg(day[] w,vector<event> e,user u ){
+			
 			week=w;
 			currentUser=u;
 			events=e;
@@ -70,6 +71,16 @@ void insertEvent(event e)
 
 
 event findLargest(){
+	
+	/*
+	*Loop through all of the chunks
+	*Store the length of each of these chunks in variables
+	*Newest compares to what is being held in the largest variable
+	*Largest is initialzied to the first iteration so that there can be a comparison
+	*Store the location of the largest chunk
+	*Create a new event at this location and a copy of the event
+	*Erase the event at that location because it is now being used
+	*/
 
     int largest;
     int newest;
