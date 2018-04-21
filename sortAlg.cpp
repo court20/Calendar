@@ -24,9 +24,10 @@ public:
         for(int x=0; x<chunks.size();x++)
         {
             event largest= findLargest();
-            bool hasSpace= false;
+			bool inserted= false;
+			int y,z=0;
 
-            for(int y=0; y<week.size();y++)
+            while(y<week.size() && !inserted)
             {
                 vector<event> temp=week[x].getEvents;
                 if(temp.size()==0){
@@ -37,23 +38,27 @@ public:
                     }
                 }
                 else{
-                    for(int z=0; z<temp.size(); z++)
+                    while(z<temp.size() && !inserted)
                     {
                         largest.setTime(temp[z].getTime-temp[z].getLength());
                         if(week[y].addEvent(largest))
                         {
-                            break;
+							inserted=true;
                         }
-                        largest.setTime(temp[z].getTime+temp[z].getLength());
-                        if(week[y].addEvent(largest))
-                        {
-                            break;
-                        }
+						else{
+							largest.setTime(temp[z].getTime+temp[z].getLength());
+							if(week[y].addEvent(largest))
+							{
+								inserted=true;
+							}
+						}
                     }
                 }
             }
         }
-
+		if(!insersted){
+			throw "No space!";
+		}
     }
 
 
