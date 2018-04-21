@@ -83,6 +83,15 @@ void insertEvent(event e)
 
 
 event findLargest(){
+	
+	/*
+	*loop through the chunk to find the largest 
+	*use variables to store the newest
+	*makes the first iteration hold the largest so that there is something to compare to 
+	*then creates a variable location to always know where the largest chunk is located
+	*After loop, create new event at the location so that it can be returned
+	*Then erases the chunk at that location because there's no more need for it. 
+	*/
 
     int largest;
     int newest;
