@@ -97,6 +97,13 @@ class assignment: public event{
 
 
 class excercise : public event {
+	
+	/*
+	*More specific than the simple calling of event
+	*Hold user accountbale to excercise, can't just apply halfway there
+	*at least 30 minutes 
+	*send messages to the user 
+	*/
 
 public:
     excercise(string n, string d, int t, int r, int l, bool rpt){
@@ -116,6 +123,14 @@ public:
 };
 
 class vacation : public event {
+	
+	/*
+	*  variation of the event class 
+	*  Checks to see if a vacation last more than a day
+	*  If it doesn't, it will warn the user that the vacation should be at least a day.
+	*  Once it confirms that an event is a day, it will block off a day
+	*  (or the amount of days designated by the user)
+	*/
     int clear = 24*60;
 
 public:
@@ -135,6 +150,13 @@ public:
 
 class eat: public event
 {
+
+/*
+* Variation of the event class
+* Takes into accont the three meals by searching for the name of the event 
+* If it matches one of the three keywords (breakfasts, lunch, dinner) 
+* 
+*/
 	eat(string n, string d, int t, int r, int l, bool rpt)
 	{
 		event(n,d,t,r,l,rpt);
