@@ -20,26 +20,32 @@ class sortAlg{
 			events=e;
 			chunks=chunk();
 			
-			for(int x=0; x<chunks.size();x++){
+			for(int x=0; x<chunks.size();x++)
+			{
 				event largest= findLargest();
 				bool hasSpace= false;
 
-				for(int y=0; y<week.size();y++){
+				for(int y=0; y<week.size();y++)
+				{
 					vector<event> temp=week[x].getEvents;
 					if(temp.size()==0){
-						if(abs(u.getWake()-u.getSleep()>largest.getLength()){
+						if(abs(u.getWake()-u.getSleep()>largest.getLength())
+						   {
 							largest.setTime(u.getWake());
 							week[y].addEvent(largest);
 						}
 					}
 					else{
-						for(int z=0; z<temp.size(); z++){
+						for(int z=0; z<temp.size(); z++)
+						{
 							largest.setTime(temp[z].getTime-temp[z].getLength());
-							if(week[y].addEvent(largest)){
+							if(week[y].addEvent(largest))
+							{
 								break;
 							}
 							largest.setTime(temp[z].getTime+temp[z].getLength());						
-							if(week[y].addEvent(largest)){
+							if(week[y].addEvent(largest))
+							{
 								break;
 							}						
 						}
