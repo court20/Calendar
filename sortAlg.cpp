@@ -1,19 +1,52 @@
 #include "day.h"
 #include "event.h"
+#include "user.h"
 #include <vector>
 #include <string>
+
 using namespace std;
 
 class sortAlg{
 	private:
+		user currentUser;
 		day[] week;
 		vector<event> events;
 		vector<event> chunks;
 
 	public:
-		sortAlg(day[] w,vector<event> e){
+		sortAlg(day[] w,vector<event> e,user u ){
 			week=w;
+			currentUser=u;
 			events=e;
+			chunks=chunk();
+			
+			for(int x=0; x<chunks.size();x++){
+				event largest= findLargest();
+				bool hasSpace= false;
+
+				for(int y=0; y<week.size();y++){
+					vector<event> temp=week[x].getEvents;
+					if(temp.size()==0){
+						if(abs(u.getWake()-u.getSleep()>largest.getLength()){
+							largest.setTime(u.getWake());
+							week[y].addEvent(largest);
+						}
+					}
+					else{
+						for(int z=0; z<temp.size(); z++){
+							largest.setTime(temp[z].getTime-temp[z].getLength());
+							if(week[y].addEvent(largest)){
+								break;
+							}
+							largest.setTime(temp[z].getTime+temp[z].getLength());						
+							if(week[y].addEvent(largest)){
+								break;
+							}						
+						}
+					}
+				}
+			}
+						
 		}
 		
 		void insertEvent(event e);
