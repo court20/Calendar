@@ -29,6 +29,9 @@ public:
 
             while(y<week.size() && !inserted)
             {
+				if(week[y].getDay()==largest.getDay()){
+					inserted=false;
+				}
                 vector<event> temp=week[x].getEvents;
                 if(temp.size()==0){
                     if(abs(u.getWake()-u.getSleep()>largest.getLength()))
@@ -52,8 +55,10 @@ public:
 								inserted=true;
 							}
 						}
+						z++;
                     }
                 }
+				y++
             }
         }
 		if(!insersted){
