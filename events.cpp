@@ -114,3 +114,21 @@ public:
     }
 
 };
+
+class vacation : public event {
+    int clear = 24;
+
+public:
+    vacation(string n, string d, int t, int r, int l, bool rpt){
+        event(n,d,t,r,l,rpt){
+            if (l < 18){
+                cout << "This is not a vacation if it is less than one day";
+            }
+
+        }
+
+        void blockEvents{
+                t = clear;
+        };
+    }
+};
