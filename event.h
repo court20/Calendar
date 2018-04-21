@@ -52,4 +52,12 @@ class exercise: public event
             
 };
 
+class vacation : public event 
+{
+
+      public:
+            vacation (string n, string d, int t, int r, int l, bool rpt);
+            void blockEvents();
+ };
+
 #endif
