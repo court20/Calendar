@@ -141,7 +141,7 @@ class eat: public event
 		{
 			if(rpt == false)
 			{
-				cout << "You're only eating " << n << "once this week? Are you sure?";
+				cout << "You're only eating " << n << "once this week. Are you sure?";
 			}
 
 			if(n.toLower() == "breakfast")
