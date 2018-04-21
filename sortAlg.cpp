@@ -9,7 +9,7 @@ using namespace std;
 class sortAlg{
 	private:
 		user currentUser;
-		day[] week;
+		day* week;
 		vector<event> events;
 		vector<event> chunks;
 
