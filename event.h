@@ -60,4 +60,10 @@ class vacation : public event
             void blockEvents();
  };
 
+class eat: public event
+{
+    public:
+        eat(string n, string day, int t, int r, int l, bool rpt);
+};
+
 #endif
