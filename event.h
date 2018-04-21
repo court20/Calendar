@@ -44,4 +44,12 @@ private:
             
 };
 
+class exercise: public event
+{
+
+      public:
+            exercise (string n, string d, int t, int r, int l, bool rpt);
+            
+};
+
 #endif
