@@ -132,3 +132,57 @@ public:
         };
     }
 };
+
+class eat: public event
+{
+	eat(string n, string d, int t, int r, int l, bool rpt)
+	{
+		event(n,d,t,r,l,rpt);
+		{
+			if(rpt == false)
+			{
+				cout << "You're only eating " << n << "once this week? Are you sure?";
+			}
+
+			if(n.toLower() == "breakfast")
+			{
+				if(t >= 11)
+				{
+					cout << "You're eating breakfast really late. Try eating breakfast earlier.";
+				}
+
+				if(t <= 5)
+				{
+					cout << "Wow, you're eating breakfast pretty early.";
+				}
+			}
+
+			if(n.toLower() == "lunch")
+			{
+				if(t >= 16)
+				{
+					cout << "You're eating lunch really late. Try eating lunch earlier";
+				}
+
+				if(t <= 10)
+				{
+					cout << "Dang, you're eating lunch pretty early.";
+				}
+			}
+
+			if(n.toLower() == "dinner")
+			{
+				if(t >= 23 || t < 2)
+				{
+					cout << "Dinner, this late? Going out for midnight munchies I see :)";
+				}
+
+				if(t <= 16)
+				{
+					cout << "If you eat dinner this late, you'll be hungry again before you sleep...";
+				}
+			}
+		}
+	}
+};
+
