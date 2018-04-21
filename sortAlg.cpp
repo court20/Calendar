@@ -8,8 +8,14 @@ using namespace std;
 
 class sortAlg{
 	private:
+	
+	/*
+	*data that we don't want to be changed
+	*we need this data to create the accruate schedule
+	*explicitely used
+	*/
 		user currentUser;
-		day* week;
+		day[] week;
 		vector<event> events;
 		vector<event> chunks;
 
@@ -61,6 +67,15 @@ class sortAlg{
 
 void insertEvent(event e)
 {
+	/*
+	*use the user info on what day during the week the event is on
+	*if the day to compare lines up with the particular day in the week
+	*the event is then inserted into that day
+	*the time and information such as that it gets inserted into the correct place during the day
+	*the object itself holds its charastceristics
+	*/
+	
+	
 	string dayToCompare = e.getDay;
 	
 	for(int i = 0; i < week.size(); i++)
