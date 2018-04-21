@@ -3,6 +3,7 @@
 using namespace std;
 
 class event{
+	
 	private:
 		string name;
 		string day;
@@ -10,6 +11,7 @@ class event{
 		int rest;
 		int length;
 		bool  repeat;
+	
 	public:
 		//all of the attributes of the event
 		event(string n, string d, int t, int r, int l, bool r){
@@ -20,6 +22,7 @@ class event{
 			length=l;
 			repeat=r;
 		}
+	
 		//setters and getters for the attributes
 		void setName(string n) {
 			name=n;
@@ -89,5 +92,25 @@ class assignment: public event{
 		int getModularity() {
 			return modularity;
 		}
+
+};
+
+
+class excercise : public event {
+
+public:
+    excercise(string n, string d, int t, int r, int l, bool rpt){
+        event(n, d, t, r, l, rpt){
+		
+            if( t < 30){
+		    
+                cout << "You need to work out for 30 or more minutes";
+            }
+            if (rpt == false){
+		    
+                cout << "You need to work out at least 3 days a week";
+            }
+        }
+    }
 
 };
