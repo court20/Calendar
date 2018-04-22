@@ -10,16 +10,16 @@ class user
 {
     private:
         string name;
-        int sleep;
-        int wake;
+        int sleep[7];
+        int wake[7];
 
     public:
         void setName(string name);
-        void setWake(int n);
-        void setSleep(int n);
+        void setWake(int n, int day);
+        void setSleep(int n, int day);
         string getName();
-        int getWake();
-        int getSleep();
+        int getWake(int day);
+        int getSleep(int day);
 };
 
 #endif

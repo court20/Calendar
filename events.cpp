@@ -14,13 +14,13 @@ class event{
 	
 	public:
 		//all of the attributes of the event
-		event(string n, string d, int t, int r, int l, bool r){
+		event(string n, string d, int t, int r, int l, bool rpt){
 			name=n;
 			day=d;
 			time=t;
 			rest=r;
 			length=l;
-			repeat=r;
+			repeat=rpt;
 		}
 	
 		//setters and getters for the attributes
@@ -78,8 +78,8 @@ class assignment: public event{
 	private:
 		int modularity;
 	public:
-		assignment(string n, string d, int t, int r, int l, bool r, int m){
-			event(n, d, t, r, l, r, m);
+		assignment(string n, string d, int t, int r, int l, bool rpt, int m){
+			event(n, d, t, r, l, rpt, m);
 			{
 				modularity=m;
 			}

@@ -1,34 +1,35 @@
 #include <string>
 #include <vector>
 #include "day.h"
+#include "event.h"
 
 using namespace std;
 
 class day {
 private:
 
-	string day;
-	vector <event> events;
+	string dy;
+	vector<event> events;
 	int wake;
 	int sleep;
 
 public:
 	//creates a day
 	day(string d) {
-		day = d;
+		dy = d;
 	}
 
 	//sets the name of the day
 	void setDay(string d) {
-		day = d;
+		dy = d;
 	}
 
 	//returns the name of the day
 	string getDay() {
-		return day;
+		return dy;
 	}
 
-	bool addEvent(assignment a)
+	bool addEvent(event a)
 	/*
 	* Function will check to see if an event can be added.
 	* Check is done by seeing if the assignment/event's time slot is not taken up within the day already. 
@@ -55,7 +56,7 @@ public:
 		return true;
 	}
 
-	bool removeEvent(assignment a) 
+	bool removeEvent(event a) 
 	/*
 	* Function will check to see if an event can be removed. 
 	* Check is done by iterating through the vector, checking to see if the assignment wanting to be deleted 
@@ -77,7 +78,7 @@ public:
 	}
 
 	//returns the vector of events
-	vector <events> getEvents() {
+	vector<event> getEvents() {
 		return events;
 	}	
 	

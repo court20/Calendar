@@ -6,8 +6,8 @@ using namespace std;
 class user
 {
     private:
-        int wake; // indicates waking hours determined by user
-        int sleep; // indicates sleeping hours determined by user
+        int wake[7]; // indicates waking hours determined by user
+        int sleep[7]; // indicates sleeping hours determined by user
         string name;
 
     public:
@@ -21,24 +21,24 @@ class user
             return name;
         }
 
-        void setSleep(int n)
+        void setSleep(int n, int day)
         {
-            sleep = n;
+            sleep[day] = n;
         }
 
-        int getSleep()
+        int getSleep(int day)
         {
             return sleep;
         }
 
-        void setWake(int n)
+        void setWake(int n,int day)
         {
-            wake = n;
+            wake[day] = n;
         }
 
-        int getWake()
+        int getWake(int day)
         {
-            return wake;
+            return wake[day];
         }
 
 };

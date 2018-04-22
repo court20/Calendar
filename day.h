@@ -3,14 +3,15 @@
 
 #include <string>
 #include <vector>
+#include "event.h"
 
 using namespace std;
 
 class day
 {
         private: 
-              string day;
-              vector<assignment> events;
+              string dy;
+              vector<event> events;
               int wake;
               int sleep;
               
@@ -18,9 +19,9 @@ class day
               day(string d);
               void setDay(string d);
               string getDay();
-              bool addEvent(assignment a);
-              bool removeEvent(assignment a);
-              vector<events> getEvents();
+              bool addEvent(event a);
+              bool removeEvent(event a);
+              vector<event> getEvents();
               void setwake(int n);
               void setSleep(int n);
               int getWake();
