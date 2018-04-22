@@ -5,31 +5,22 @@
 
 using namespace std;
 
-class day {
-private:
-
-	string dy;
-	vector<event> events;
-	int wake;
-	int sleep;
-
-public:
 	//creates a day
-	day(string d) {
+	day::day(string d) {
 		dy = d;
 	}
 
 	//sets the name of the day
-	void setDay(string d) {
+	void day::setDay(string d) {
 		dy = d;
 	}
 
 	//returns the name of the day
-	string getDay() {
+	string day::getDay() {
 		return dy;
 	}
 
-	bool addEvent(event a)
+	bool day::addEvent(event a)
 	/*
 	* Function will check to see if an event can be added.
 	* Check is done by seeing if the assignment/event's time slot is not taken up within the day already. 
@@ -39,13 +30,13 @@ public:
 	
 	{
 
-		int time = a.getTime;
+		int time = a.getTime();
 		//goes through the events and returns false if event cannot be added
 		for (int x = 0; x < events.size(); x++) {
 			int start = events[x].getTime();
 			int end = events[x].getLength() + start;
 			int eventEnd = a.getTime() + a.getLength();
-			if (a.getTime() >= start && a.getTime <= end) {
+			if (a.getTime() >= start && a.getTime() <= end) {
 				return false;
 			}
 			if (eventEnd >= start && eventEnd <= end) {
@@ -56,7 +47,7 @@ public:
 		return true;
 	}
 
-	bool removeEvent(event a) 
+	bool day::removeEvent(event a)
 	/*
 	* Function will check to see if an event can be removed. 
 	* Check is done by iterating through the vector, checking to see if the assignment wanting to be deleted 
@@ -69,7 +60,7 @@ public:
 	{
 		bool removed = false;
 		for (int x = 0; x < events.size(); x++) {
-			if (events[x] == a) {
+			if (events[x].getName() == a.getName()) {
 				events.erase(events.begin() + x);
 				removed = true;
 			}
@@ -78,34 +69,33 @@ public:
 	}
 
 	//returns the vector of events
-	vector<event> getEvents() {
+	vector<event> day::getEvents() {
 		return events;
 	}	
 	
 	// sets the waking time 
-	void setWake(int n)
+	void day::setwake(int n)
 	{
 		wake = n;
 	}
 	
 	// gets the waking time 
-	int getWake()
+	int day::getWake()
 	{
 		return wake;
 	}
 
 	// sets the sleeping time 
-	void setSleep(int n)
+	void day::setSleep(int n)
 	{
 		sleep = n;
 	}
 	
 	// gets the sleeping time
-	int getSleep()
+	int day::getSleep()
 	{
 		return sleep;
 	}
 
-};
 
 			

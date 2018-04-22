@@ -22,7 +22,7 @@ class event
             void setTime(int n);
             void setRest(int n);
             void setLength(int n);
-            void setRepeat(int n);
+            void setRepeat(bool n);
             string getName();
             string getDay();
             int getTime();
@@ -35,7 +35,7 @@ class event
 class assignment: public event
 {
 private:
-            int modularity;
+      int modularity;
             
       public:
             assignment (string n, string d, int t, int r, int l, bool rpt, int m);
@@ -44,26 +44,6 @@ private:
             
 };
 
-class exercise: public event
-{
 
-      public:
-            exercise (string n, string d, int t, int r, int l, bool rpt);
-            
-};
-
-class vacation : public event 
-{
-
-      public:
-            vacation (string n, string d, int t, int r, int l, bool rpt);
-            void blockEvents();
- };
-
-class eat: public event
-{
-    public:
-        eat(string n, string day, int t, int r, int l, bool rpt);
-};
 
 #endif
