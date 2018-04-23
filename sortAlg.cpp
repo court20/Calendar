@@ -3,6 +3,7 @@
 #include "user.h"
 #include <vector>
 #include <string>
+#include "sortAlg.h"
 
 using namespace std;
 
